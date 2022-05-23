@@ -1,0 +1,91 @@
+.centerTipoFiltro {
+    display: flex;
+    align-items: center;
+}
+
+.iconEliminarMovimiento{
+    color: red;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-right: 2rem;
+}
+
+.iconEditarMovimiento{
+    color: rgb(8, 0, 255);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.listaMovimientos {
+    border: 1px solid;
+    border-radius: 20px;
+    padding-bottom: 15px;
+}
+
+.filtros{
+    padding: 20px;
+}
+
+.movimientos{
+    margin: 0px 22rem 0px 50px;
+    display: flex;
+    align-items: baseline;
+    max-width: 86%;
+    border: 1px solid;
+}
+
+.spanTotal{
+    background: blue;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+}
+
+.vertical {
+    display: flex;
+    align-items: center;
+}
+
+.pTotal{
+    margin-top: 11px;
+    margin-right: 10px;
+}
+
+.end{
+    text-align: end;
+}
+
+.movimientoIngreso{
+    background: #00f10d;
+    padding: 5px 20px 5px 20px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.movimientoGasto{
+    background: #f10000;
+    padding: 5px 20px 5px 20px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.tituloListaMkovimientos{
+    background-color: #d8d8d8;
+    margin-left: 0px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    min-width: 100.1%;
+}
+
+
+.sinSaldoInicialRegistrado{
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+

@@ -1,0 +1,32 @@
+.header{
+    border-radius: 6px;
+    padding: 10px;
+    background-color: rgb(238 238 238 / 50%);
+    margin-top: 1rem;
+}
+.logo{
+    font-size: 5rem;
+    color: #78e078;
+}
+
+.nombreLogo{
+    display: flex;
+    align-items: center;
+}
+
+.center{
+    text-align: center;
+}
+
+.colRegistroMovimientos {
+    border: 1px solid;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.disabledSaldoInicial{
+    user-select: none;
+    pointer-events: none;
+    background-color: #e9ecef;
+    opacity: 1;
+}

@@ -1,0 +1,7 @@
+.pSaldoInsuficiente{
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
