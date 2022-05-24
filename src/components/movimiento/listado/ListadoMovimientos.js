@@ -185,6 +185,7 @@ function ListadoMovimientos({
             newSaldoFinal = Number(newSaldoFinal) + Number(movimientoEdit.cantidad);
             console.log(saldoFinal);
           }
+          
           setSaldofinal(newSaldoFinal);
         }
       }
