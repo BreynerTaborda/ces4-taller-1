@@ -126,6 +126,8 @@ function ListadoMovimientos({
   }
 
   const handleEditarMovimiento = (movimientoEdit) =>{
+    console.log("Estamos viendo que,", movimientoEdit)
+
     let saldoInsuficiente = false;
     const newMoviminetos = movimientos.map((movimiento) => {
       if(movimiento.id === movimientoEdit.id){
@@ -168,11 +170,13 @@ function ListadoMovimientos({
             if(Number(saldoFinal) < Number(movimientoEdit.cantidad)){
               saldoInsuficiente = true;
               setSaldoInsuficiente(true);
+            }else{
+              newSaldoFinal = Number(newSaldoFinal) - Number(movimientoEdit.cantidad);
+              movimiento.nombre = movimientoEdit.nombre;
+              movimiento.cantidad = movimientoEdit.cantidad;
+              movimiento.tipoMovimiento = movimientoEdit.tipoMovimiento
             }
-            newSaldoFinal = Number(newSaldoFinal) - Number(movimientoEdit.cantidad);
-            movimiento.nombre = movimientoEdit.nombre;
-            movimiento.cantidad = movimientoEdit.cantidad;
-            movimiento.tipoMovimiento = movimientoEdit.tipoMovimiento
+            
           }else{
             newSaldoFinal = Number(saldoFinal) + Number(movimiento.cantidad);
             movimiento.nombre = movimientoEdit.nombre;
