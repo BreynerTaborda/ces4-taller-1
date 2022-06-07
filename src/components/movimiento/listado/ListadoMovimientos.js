@@ -133,12 +133,13 @@ function ListadoMovimientos({
       if(movimiento.id === movimientoEdit.id){
         if(movimiento.tipoMovimiento === movimientoEdit.tipoMovimiento){
           let newSaldoFinal;
-          if(movimiento.cantidad > movimientoEdit.cantidad){
+          if(movimiento.cantidad >= movimientoEdit.cantidad){
             if(movimiento.tipoMovimiento === "Ingreso"){
               newSaldoFinal = Number(saldoFinal) - (Number(movimiento.cantidad) - Number(movimientoEdit.cantidad))
             }else{
               newSaldoFinal = Number(saldoFinal) + (Number(movimiento.cantidad) - Number(movimientoEdit.cantidad))
             }
+
             setSaldofinal(newSaldoFinal);  
             movimiento.nombre = movimientoEdit.nombre;
             movimiento.cantidad = movimientoEdit.cantidad;
@@ -167,7 +168,7 @@ function ListadoMovimientos({
           let newSaldoFinal;
           if(movimientoEdit.tipoMovimiento === "Gasto"){
             newSaldoFinal = Number(saldoFinal) - Number(movimiento.cantidad);
-            if(Number(saldoFinal) < Number(movimientoEdit.cantidad)){
+            if(Number(newSaldoFinal) < Number(movimientoEdit.cantidad)){
               saldoInsuficiente = true;
               setSaldoInsuficiente(true);
             }else{
@@ -175,6 +176,7 @@ function ListadoMovimientos({
               movimiento.nombre = movimientoEdit.nombre;
               movimiento.cantidad = movimientoEdit.cantidad;
               movimiento.tipoMovimiento = movimientoEdit.tipoMovimiento
+              setSaldofinal(newSaldoFinal);
             }
             
           }else{
@@ -183,10 +185,9 @@ function ListadoMovimientos({
             movimiento.cantidad = movimientoEdit.cantidad;
             movimiento.tipoMovimiento = movimientoEdit.tipoMovimiento
             newSaldoFinal = Number(newSaldoFinal) + Number(movimientoEdit.cantidad);
-            console.log(saldoFinal);
+            setSaldofinal(newSaldoFinal);
           }
           
-          setSaldofinal(newSaldoFinal);
         }
       }
 
